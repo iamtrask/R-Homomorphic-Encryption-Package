@@ -1,0 +1,10 @@
+citHeader("If you use the HomomorphicEncryption package, please cite it in publications using:")
+
+citEntry(entry = "Misc",
+         author = "L. J. M. Aslett and P. M. Esperan{\\c c}a and C. C. Holmes",
+         title = "A review of homomorphic encryption and software tools for encrypted statistical machine learning",
+         year = "2015",
+         note = "Technical report, University of Oxford",
+         url = "http://www.louisaslett.com/HomomorphicEncryption/",
+         textVersion = "L. J. M. Aslett, P. M. Esperança, and C. C. Holmes (2015). A review of homomorphic encryption and software tools for encrypted statistical machine learning. Technical report, University of Oxford."
+)

@@ -1,0 +1,59 @@
+useDynLib(HomomorphicEncryption)
+
+import(methods)
+import(gmp)
+import(RcppParallel)
+import(Rcpp)
+
+# Main encryption functions
+export(pars,
+       parsHelp,
+       keygen,
+       enc,
+       dec)
+
+# I/O utility functions
+export(#HEmem,
+       saveFHE,
+       loadFHE,
+       save,
+       save.image,
+       saveRDS)
+
+# Methods which are not S4 generic by default
+exportMethods("diag",
+              "diag<-",
+              "t",
+              "dimnames<-",
+              "rowSums",
+              "colSums",
+              "crossprod",
+              "tcrossprod")
+
+# FandV method dispatch
+S3method(keygen, Rcpp_FandV_par)
+S3method(enc, Rcpp_FandV_pk)
+S3method(dec, Rcpp_FandV_sk)
+S3method(saveFHE, FandV_keys)
+S3method(saveFHE, Rcpp_FandV_ct)
+S3method(saveFHE, Rcpp_FandV_ct_vec)
+S3method(saveFHE, Rcpp_FandV_ct_mat)
+S3method("%*%", Rcpp_FandV_ct_vec) # See FandV.R for why this is necessary
+S3method("%*%", Rcpp_FandV_ct_mat)
+S3method("matrix", Rcpp_FandV_ct)
+S3method("matrix", Rcpp_FandV_ct_vec)
+
+export("matrix.Rcpp_FandV_ct")
+
+# # FandV_CRT method dispatch
+# S3method(print, FandV_CRT)
+# S3method(print, FandV_CRT_keys)
+# S3method(print, FandV_CRT_pk)
+# S3method(print, FandV_CRT_sk)
+# S3method(print, FandV_CRT_rlk)
+# S3method(keygen, FandV_CRT)
+# S3method(enc, FandV_CRT_pk)
+# S3method(dec, FandV_CRT_sk)
+#
+# # General CRT method dispatch
+# S3method(dec, CRT)

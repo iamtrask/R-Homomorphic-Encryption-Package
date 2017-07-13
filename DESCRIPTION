@@ -1,0 +1,22 @@
+Package: HomomorphicEncryption
+Type: Package
+Title: Fully Homomorphic Encryption
+Version: 0.2
+Date: 2015-08-19
+Author: Louis Aslett
+Maintainer: Louis Aslett <louis.aslett@stats.ox.ac.uk>
+Description: A reference implementation of homomorphic encryption schemes.
+    These are encryption schemes which allow limited operations (such as
+    addition and multiplication) to be performed on the cipher text directly
+    without decrypting first.  In other words, if you encrypt the values 2 and 3
+    and "add" their cipher texts then decrypting renders 5.
+License: GPL-2
+ByteCompile: yes
+Imports: Rcpp (>= 0.11.2), methods, RcppParallel
+LinkingTo: Rcpp, RcppParallel
+Depends: gmp
+Suggests: testthat, microbenchmark
+RcppModules: FandV
+Encoding: UTF-8
+NeedsCompilation: yes
+Packaged: 2015-08-19 18:05:37 UTC; louis

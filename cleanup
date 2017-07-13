@@ -1,0 +1,4 @@
+#!/bin/sh
+rm -f ./config.h ./config.log ./config.status
+rm -f src/Makevars
+rm -f src/*.{o,so,d}
