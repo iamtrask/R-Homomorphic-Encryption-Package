@@ -3,6 +3,7 @@ This is a fork of the R HomomorphicEncryption package originally from http://www
 
 To use, clone the repository to your local disk. Open your "r" command line and run:
 
+```
 install.packages("/path/to/R-Homomorphic-Encryption-Package", repos = NULL, type="source")
 library("HomomorphicEncryption")
 p <- pars("FandV")
@@ -15,3 +16,4 @@ cres3 <- c1 %*% c2
 dec(k$sk, cres1)
 dec(k$sk, cres2)
 dec(k$sk, cres3)
+```
