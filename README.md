@@ -1,5 +1,5 @@
 # R-Homomorphic-Encryption-Package
-This is a fork of the R HomomorphicEncryption package originally from http://www.louisaslett.com/HomomorphicEncryption/
+This is a slightly modified fork of the R HomomorphicEncryption package originally from http://www.louisaslett.com/HomomorphicEncryption/
 
 To use, clone the repository to your local disk. Open your "r" command line and run:
 
